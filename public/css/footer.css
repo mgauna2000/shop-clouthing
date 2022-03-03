@@ -58,6 +58,9 @@ footer {
     color: #fff;
     margin-left: 20px;
     text-transform: capitalize;
+    text-decoration: none;
+    border: 1px solid #bbb;
+    padding: 5px;
 }
 .social-link:nth-child(1) {
     margin-left: 0;

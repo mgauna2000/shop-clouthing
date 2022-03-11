@@ -14,6 +14,19 @@ app.use(express.static(staticPacth));
 app.get("/", (req, res) => {
     res.sendFile(path.join(staticPacth, "index.html"));
 })
+//inscribirse
+app.get("/signup", (req, res) => {
+    res.sendFile(path.join(staticPacth, "signup.html"));
+})
+// 404 ruta
+app.get("/404", (req, res) => {
+    res.sendFile(path.join(staticPacth, "404.html"));
+})
+
+app.use((req, res) => {
+    res.redirect("/404");
+})
+
 
 app.listen(3000, () => {
     console.log('listening on port 3000');

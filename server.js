@@ -9,6 +9,7 @@ let staticPacth = path.join(__dirname, "public");
 const app = express();
 //middlewares
 app.use(express.static(staticPacth));
+app.use(express.json());
 //routes
 //home route
 app.get("/", (req, res) => {
@@ -17,6 +18,10 @@ app.get("/", (req, res) => {
 //inscribirse
 app.get("/signup", (req, res) => {
     res.sendFile(path.join(staticPacth, "signup.html"));
+})
+app.post('/signup', (req, res) => {
+    console.log(req.body);
+    res.json('data recieved');
 })
 // 404 ruta
 app.get("/404", (req, res) => {

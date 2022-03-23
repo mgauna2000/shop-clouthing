@@ -24,7 +24,7 @@ submitBtn.addEventListener('click', () => {
         showAlert('you must agree to our terms and conditions');
     }else{
         //enviar formulario
-        loader.getElementsByClassName.display = 'block';
+        loader.style.display = 'block';
         sendData('/signup', {
             name: name.value,
             email: email.value,

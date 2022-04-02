@@ -52,6 +52,10 @@ const processData = (data) => {
     loader.style.display = null;
     if (data.alert) {
         showAlert(data.alert);
+    }else if(data.name) {
+        //crear authToken
+        data.authToken = generateToken(data.email);
+        console.log(data);
     }
 }
 

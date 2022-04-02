@@ -55,7 +55,8 @@ const processData = (data) => {
     }else if(data.name) {
         //crear authToken
         data.authToken = generateToken(data.email);
-        console.log(data);
+        sessionStorage.user = JSON.stringify(data);
+        location.replace('/');
     }
 }
 

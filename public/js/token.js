@@ -7,5 +7,5 @@ const generateToken = (key) => {
         let randomIndex = Math.floor(Math.random() * index);
         token += char[randomIndex] + char[index - randomIndex];
     }
-    return key;
+    return token;
 }

@@ -68,6 +68,11 @@ app.post('/signup', (req, res) => {
         }
     })
 })
+// login ruta
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(staticPacth, "login.html"));
+})
+
 // 404 ruta
 app.get("/404", (req, res) => {
     res.sendFile(path.join(staticPacth, "404.html"));

@@ -10,7 +10,7 @@ const createNav = () => {
                     <button class="search-btn">search</button>
                 </div>
                 <a>
-                    <img src="img/user.png" alt="">
+                    <img src="img/user.png" id="user-img" alt="">
                     <div class="login-logout-popup hide>
                         <p class="account-info">Log in as, name</p>
                         <button class="btn" id="user-btn">Log out</button>
@@ -30,3 +30,13 @@ const createNav = () => {
 }
 
 createNav();
+
+//nav popup
+const userImageButton = document.querySelector('#user-img');
+const userPopup = document.querySelector('.login-logout-popup');
+const popupText = document.querySelector('.account-info');
+const actionBtn = document.querySelector('#user-btn');
+
+userImageButton.addEventListener('click', () => {
+    userPopup.classList.toggle('hide');
+})

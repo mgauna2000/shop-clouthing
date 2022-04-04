@@ -124,3 +124,7 @@
     text-transform: capitalize;
     cursor: pointer;
 }
+.hide {
+    opacity: 0;
+    pointer-events: none;
+}

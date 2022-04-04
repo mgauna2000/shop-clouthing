@@ -11,7 +11,7 @@ const createNav = () => {
                 </div>
                 <a>
                     <img src="img/user.png" alt="">
-                    <div class="login-logout-popup>
+                    <div class="login-logout-popup hide>
                         <p class="account-info">Log in as, name</p>
                         <button class="btn" id="user-btn">Log out</button>
                     </div>

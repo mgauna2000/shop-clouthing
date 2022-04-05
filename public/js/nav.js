@@ -40,3 +40,23 @@ const actionBtn = document.querySelector('#user-btn');
 userImageButton.addEventListener('click', () => {
     userPopup.classList.toggle('hide');
 })
+
+window.onload = () => {
+    let user = JSON.parse(sessionStorage.user || null);
+    if(user != null) {
+        //el usuario a iniciado sesion
+        popupText.innerHTML = `log in as, ${user.name}`;
+        actionBtn.innerHTML = 'log out';
+        actionBtn.addEventListener('click', () => {
+            sessionStorage.clear();
+            location.reload();
+        })
+    }else{
+        //el usuario no inicio sesion
+        popupText.innerHTML = 'log in to place order';
+        actionBtn.innerHTML = 'log in';
+        actionBtn.addEventListener('click', () => {
+            location.href = '/login';
+        })
+    }
+}

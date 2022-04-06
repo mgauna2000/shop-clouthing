@@ -102,6 +102,9 @@ app.post('/login', (req, res) => {
 app.get('/seller', (req, res) => {
     res.sendFile(path.join(staticPacth, "seller.html"));
 })
+app.post('/seller', (req, res) => {
+    let { name, about, address, number, tac, legitInfo, email } = req.body;
+})
 // 404 ruta
 app.get("/404", (req, res) => {
     res.sendFile(path.join(staticPacth, "404.html"));
